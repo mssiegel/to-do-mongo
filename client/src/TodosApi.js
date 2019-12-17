@@ -1,28 +1,28 @@
 export default {
   getTodos: async () => {
-    const response = await fetch('/employee')
-    return response.json()
-  },
-  deleteEmployee: async (_id) => {
-    const response = await fetch(`/employee/${_id}`, {method: 'delete'})
-    return response.json()
-  },
-  updateEmployee: async (employee) => {
-    const request = {
-      method: 'put', 
-      body: JSON.stringify(employee),
-      headers: {'Content-Type': 'application/json'}
+    const response = await fetch('/api/todos')
+    const todos = await response.json()
+    const categories = {
+      Blocked: [],
+      Todo: [],
+      "In-Progress": [],
+      Completed: []
     }
-    const response = await fetch(`/employee/${employee._id}`, request)
+    for (const todo of todos) 
+      categories[todo.category].push(todo)
+    return categories
+  },
+  deleteTodo: async (_id) => {
+    const response = await fetch(`/api/todos/${_id}`, {method: 'delete'})
     return response.json()
   },
-  createEmployee: async (employee) => {
+  addTodo: async (todo) => {
     const request = {
       method: 'post', 
-      body: JSON.stringify(employee),
+      body: JSON.stringify(todo),
       headers: {'Content-Type': 'application/json'}
     }
-    const response = await fetch('/employee', request)
+    const response = await fetch('/api/todos', request)
     return response.json()
   }
 }
