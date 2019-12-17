@@ -1,4 +1,4 @@
 # to-do-mongo
-Separate projects into cagegories: "Blocked", "Todo", "In-Progress", "Completed"
+Web app that lets you separate projects into cagegories: "Blocked", "Todo", "In-Progress", "Completed"
 
-Website built using the MERN stack of MongoDB, Express, Node, and React. 
+Built using the MERN stack of MongoDB, Express, Node, and React. 
