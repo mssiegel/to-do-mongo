@@ -13,14 +13,12 @@ app.use(bodyParser.json())
 const todosRoute = require('./routes/todos')
 app.use('/api/todos', todosRoute)
 
-/*
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'))
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
   })
 }
-*/
 
 const mongoUri = process.env.mongodb || process.env.DB_CONNECTION 
 mongoose.connect(mongoUri,{ useNewUrlParser: true, useUnifiedTopology: true })
