@@ -15,7 +15,8 @@ router.get('/', async (req, res) => {
 //Create todo
 router.post('/', async (req, res) => {
   const todo = new Todo({
-    todo: req.body.todo
+    todo: req.body.todo,
+    category: req.body.category
   })
 
   try {

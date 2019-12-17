@@ -4,6 +4,10 @@ const TodoSchema = mongoose.Schema({
   todo: {
     type: String,
     required: true
+  },
+  category: {
+    type: String,
+    required: true
   }
 })
 
