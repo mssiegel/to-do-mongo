@@ -1,0 +1,38 @@
+.App {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-left: 25px;
+  margin-right: 25px;
+  grid-column-gap: 25px;
+}
+
+.name {
+  height: 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow {
+  color: grey;
+  font-weight: bold;
+}
+
+.card-text {
+  margin: auto;
+}
+
+.add-a-card {
+  text-align: right;
+  color: grey;
+}
