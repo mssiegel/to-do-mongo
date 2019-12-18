@@ -4,7 +4,7 @@ Web app that lets you separate projects into categories: "Blocked", "Todo", "In-
 Built using the MERN stack of MongoDB, Express, Node, and React. 
 
 Web app that displays editable Anheuser-Busch card components. Users can Creat, Read, and Update cards.
-Back end uses Node, Express, MongoDB. Front end built using create-react-app.
+Back end uses Node, Express, MongoDB. Front end built using React.
 
 To get started first install all npm packages by running:
 1. ```npm run server-install```
